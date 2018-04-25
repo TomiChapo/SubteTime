@@ -45,20 +45,19 @@ export default class Main extends React.Component {
         {this.state.info.length == 0 ? (
           <Loading />
         ) : (
-          <div>
+          <div className="text-center">
             {_.map(this.state.info, subte => {
               return (
-                <div style={{ display: 'inline-block' }} key={subte.LineName}>
-                  <Boton
-                    selectedLine={this.state.selectedSubte}
-                    onClick={() => {
-                      if (!this.state.loading) {
-                        this.handleSubmit(subte.LineName);
-                      }
-                    }}
-                    LineName={subte.LineName}
-                  />
-                </div>
+                <Boton
+                  key={subte.LineName}
+                  selectedLine={this.state.selectedSubte}
+                  onClick={() => {
+                    if (!this.state.loading) {
+                      this.handleSubmit(subte.LineName);
+                    }
+                  }}
+                  LineName={subte.LineName}
+                />
               );
             })}
             <div>

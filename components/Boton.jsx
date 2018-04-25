@@ -1,18 +1,16 @@
 import React from 'react';
 
 export default ({ selectedLine, onClick, LineName }) => (
-  <div>
+  <React.Fragment>
     {!LineName ? (
       'Loading'
     ) : (
-      <div>
-        <button
-          className={LineName === selectedLine.LineName ? 'selectedLine' : ''}
-          onClick={onClick}
-        >
-          {LineName}
-        </button>
-      </div>
+      <button
+        className={LineName === selectedLine.LineName ? 'selectedLine' : ''}
+        onClick={onClick}
+      >
+        {LineName}
+      </button>
     )}
-  </div>
+  </React.Fragment>
 );

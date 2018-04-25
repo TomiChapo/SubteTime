@@ -1,6 +1,13 @@
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+h1 {
+  margin-top: 0;
+  text-align: center;
+}
+
 button {
-  display: flex;
-  margin-right: 10px;
   margin-bottom: 10px;
   color: white;
   background-color: blue;
@@ -16,6 +23,14 @@ button {
   height: 40px;
   position: relative;
   box-shadow: 0 3px 8px -1px rgba(27, 145, 245, 0.2), 0px 0px 2px rgba(27, 145, 245, 0.2);
+}
+
+button~button {
+  margin-left: 10px;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .selectedLine {
@@ -45,12 +60,7 @@ button {
   }
 }
 
-h3 {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
 #Frequency {
-  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 18px;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -59,13 +69,9 @@ h3 {
 }
 
 .container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  width: 50%;
+  margin: 0 auto;
+  padding: 15px;
+  max-width: 500px;
   background-color: rgba(100, 87, 87, 0.3);
   border-radius: 20px;
 }
